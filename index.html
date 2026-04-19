@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Prontinhos | Bolos Caseiros</title>
+    <!-- Tailwind CSS para Estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        :root {
+            --primary: #5d4037;
+            --secondary: #d4a373;
+            --accent: #faedcd;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fffcf2;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cake-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cake-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-pattern {
+            background-color: #5d4037;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237a5a4a' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-[#5d4037]">Meus <span class="text-[#d4a373]">Prontinhos</span></div>
+            <div class="hidden md:flex space-x-8 font-medium text-gray-700">
+                <a href="#inicio" class="hover:text-[#d4a373] transition">Início</a>
+                <a href="#cardapio" class="hover:text-[#d4a373] transition">Bolos</a>
+                <a href="#diferencial" class="hover:text-[#d4a373] transition">Qualidade</a>
+                <a href="#contato" class="hover:text-[#d4a373] transition border-b-2 border-[#d4a373]">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero-pattern py-20 px-6 text-center text-white">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl mb-6">Sabor de casa em cada fatia.</h1>
+            <p class="text-xl md:text-2xl mb-10 text-[#faedcd] opacity-90">Bolos artesanais feitos com carinho para o seu café.</p>
+            <a href="#cardapio" class="bg-[#d4a373] hover:bg-[#c29262] text-white px-10 py-4 rounded-full text-lg font-semibold transition-all shadow-lg inline-block">Ver Cardápio</a>
+        </div>
+    </header>
+
+    <!-- Cardápio -->
+    <section id="cardapio" class="py-20 px-6 bg-[#fefae0]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl text-[#5d4037] mb-12">Nossas Especialidades</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="cake-card bg-white p-6 rounded-2xl shadow-md border-t-4 border-orange-400">
+                    <h3 class="text-xl font-bold text-[#5d4037]">Cenoura</h3>
+                    <p class="text-gray-600 text-sm mt-2">Com calda de chocolate.</p>
+                    <div class="mt-4 text-[#d4a373] font-bold text-lg">R$ 28,00</div>
+                </div>
+                <div class="cake-card bg-white p-6 rounded-2xl shadow-md border-t-4 border-[#5d4037]">
+                    <h3 class="text-xl font-bold text-[#5d4037]">Chocolate</h3>
+                    <p class="text-gray-600 text-sm mt-2">Cacau 100% intenso.</p>
+                    <div class="mt-4 text-[#d4a373] font-bold text-lg">R$ 32,00</div>
+                </div>
+                <div class="cake-card bg-white p-6 rounded-2xl shadow-md border-t-4 border-gray-400">
+                    <h3 class="text-xl font-bold text-[#5d4037]">Formigueiro</h3>
+                    <p class="text-gray-600 text-sm mt-2">O clássico da infância.</p>
+                    <div class="mt-4 text-[#d4a373] font-bold text-lg">R$ 25,00</div>
+                </div>
+                <div class="cake-card bg-white p-6 rounded-2xl shadow-md border-t-4 border-[#d4a373]">
+                    <h3 class="text-xl font-bold text-[#5d4037]">Café</h3>
+                    <p class="text-gray-600 text-sm mt-2">Com toque de canela.</p>
+                    <div class="mt-4 text-[#d4a373] font-bold text-lg">R$ 30,00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosso Diferencial (Qualidade) -->
+    <section id="diferencial" class="py-16 px-6 bg-white">
+        <div class="max-w-5xl mx-auto border-2 border-dashed border-[#d4a373] rounded-3xl p-8 md:p-12 text-center bg-[#fffcf2]">
+            <h2 class="text-3xl text-[#5d4037] mb-6 font-bold">Por que escolher o nosso bolo?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-y-3">
+                    <div class="text-3xl">🌿</div>
+                    <h3 class="font-bold text-[#5d4037]">Zero Conservantes</h3>
+                    <p class="text-sm text-gray-600 italic leading-relaxed">Não utilizamos conservantes químicos. Nossos bolos são feitos para serem consumidos frescos e saudáveis.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="text-3xl">🥣</div>
+                    <h3 class="font-bold text-[#5d4037]">Massa de Verdade</h3>
+                    <p class="text-sm text-gray-600 italic leading-relaxed">Não usamos massas prontas de caixinha. Cada receita é feita do zero, batida com carinho e paciência.</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="text-3xl">✨</div>
+                    <h3 class="font-bold text-[#5d4037]">Ingredientes Premium</h3>
+                    <p class="text-sm text-gray-600 italic leading-relaxed">Cada ingrediente é selecionado pela qualidade: ovos frescos, leite de verdade e o melhor chocolate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato com WhatsApp -->
+    <section id="contato" class="py-20 px-6 max-w-4xl mx-auto">
+        <div class="bg-[#5d4037] text-white rounded-3xl p-8 md:p-12 shadow-2xl">
+            <h2 class="text-3xl text-center mb-8">Peça o seu Prontinho</h2>
+            
+            <div class="space-y-4">
+                <input type="text" id="wa-name" placeholder="Seu Nome" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white outline-none focus:border-[#d4a373]">
+                
+                <textarea id="wa-message" placeholder="Quais bolos deseja encomendar?" rows="4" class="w-full p-4 rounded-xl bg-white/10 border border-white/20 text-white outline-none focus:border-[#d4a373]"></textarea>
+                
+                <button onclick="sendToWhatsApp()" class="w-full py-4 bg-[#25D366] hover:bg-[#128C7E] text-white font-bold rounded-xl transition flex items-center justify-center gap-3 uppercase tracking-wider">
+                    Pedir pelo WhatsApp
+                </button>
+
+                <!-- Aviso de Paciência -->
+                <div class="mt-6 p-4 bg-white/5 border border-white/10 rounded-xl text-center">
+                    <p class="text-xs text-white/60 leading-relaxed italic">
+                        "A resposta pode demorar um pouco devido à produção artesanal, por favor não se irrite. Cada bolo é feito com dedicação total!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-400 text-sm">
+        <p>&copy; 2026 Meus Prontinhos - Sinop/MT</p>
+    </footer>
+
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('wa-name').value;
+            const message = document.getElementById('wa-message').value;
+            const phone = "5566996734430"; 
+
+            if (!name || !message) {
+                alert("Por favor, preencha o seu nome e o seu pedido!");
+                return;
+            }
+
+            const text = `Olá, meu nome é ${name}! Gostaria de fazer um pedido: ${message}`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/${phone}?text=${encodedText}`, '_blank');
+        }
+    </script>
+</body>
+</html>
